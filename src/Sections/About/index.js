@@ -126,7 +126,7 @@ const About = () => {
       </Hand>
       <Main>
         <div>
-          <Title>About Us</Title>
+          <Title>à propos </Title>
           <CurvedLine />
         </div>
         <Content>
@@ -139,10 +139,12 @@ const About = () => {
             </Human>
 
             <Text>
-              We help our customers to tell about themselves, to grow and stand
-              out in an increasingly competitive digital world, through creative
-              projects that are able to attract and involve, creating strategic
-              value.
+               Notre application de gestion des matériaux offre une approche
+               innovante pour optimiser la gestion des ressources matérielles.
+               Avec une interface conviviale et des fonctionnalités puissantes,
+               elle permet aux entreprises de centraliser et d'optimiser leurs
+               processus, favorisant ainsi une utilisation plus efficace des
+               ressources et une croissance organisationnelle accrue.
             </Text>
             <div>
               <Circle style={{ backgroundColor: "var(--purple)" }} />

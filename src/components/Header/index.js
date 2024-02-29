@@ -9,7 +9,7 @@ const Headers = styled.header`
   justify-content: space-between;
   align-items: center;
   padding: 1rem 5rem;
-  background-color: var(--nav);
+  background-color:#232384;/* Nouvelle couleur */
   color: var(--white);
   position: relative;
   z-index: 500;
@@ -58,14 +58,6 @@ const Nav = styled.nav`
       width: 100%;
       background: var(--purple);
     }
-    /* &:not(:last-child) {
-      margin-right: 2rem;
-    } */
-    /* @media only Screen and (max-width: 48em) {
-      &:not(:last-child) {
-        margin-right: 1rem;
-      }
-    } */
   }
 `;
 
@@ -157,9 +149,9 @@ const MobileMenu = styled.nav`
     cursor: pointer;
   }
 `;
+
 const Header = () => {
   const [click, setClick] = useState(false);
-  //const handleClick = () => setClick(!click);
   const ref = useRef(null);
 
   gsap.registerPlugin(ScrollTrigger);
@@ -183,7 +175,6 @@ const Header = () => {
     const element = ref.current;
 
     const mq = window.matchMedia("(max-width: 40em)");
-    // console.log("mq", mq);
     if (mq.matches) {
       gsap.to(element, {
         position: "fixed",
@@ -234,21 +225,24 @@ const Header = () => {
   return (
     <Headers ref={ref}>
       <Logo>
-        <img src={logo} alt="CodeBucks" />
-        <h3>CodeBucks</h3>
+        <img src={logo} alt="logo" />
+        <h3>Gestion Des Matériaux</h3>
       </Logo>
       <Nav>
         <a href="#home" onClick={(e) => scrollUp("home", e)}>
-          Home
+          accuile
         </a>
         <a href="#about" onClick={(e) => scrollUp("about", e)}>
-          About Us
+          à propos
         </a>
         <a href="#services" onClick={(e) => scrollUp("services", e)}>
           Services
         </a>
-        <a href="#contact" onClick={(e) => scrollUp("contact", e)}>
-          <Button>Contact Us</Button>
+        <a href="#contact" onClick={(e) => handleClick("contact", e)}>
+          contact
+        </a>
+        <a href="#sign in " onClick={(e) => handleClick("sign in ", e)}>
+          <Button>se connecter</Button>
         </a>
       </Nav>
       <HamburgerBtn clicked={+click} onClick={() => setClick(!click)}>
@@ -265,7 +259,10 @@ const Header = () => {
           Services
         </a>
         <a href="#contact" onClick={(e) => handleClick("contact", e)}>
-          <Button>Contact Us</Button>
+          contact
+        </a>
+        <a href="#sign in " onClick={(e) => handleClick("sign in ", e)}>
+          <Button>sign in</Button>
         </a>
       </MobileMenu>
     </Headers>

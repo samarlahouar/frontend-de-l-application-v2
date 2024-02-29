@@ -322,18 +322,21 @@ const Services = () => {
   return (
     <ServiceSection id="services">
       <Background ref={ref}>
-        <Title className="title">What We Do</Title>
+        <Title className="title">ce que nous faisons </Title>
         <Line id="line" />
         <Triangle id="triangle" />
       </Background>
 
       <Content ref={addToRefs}>
         <TextBlock
-          topic="Design"
-          title={<h1>We build award winning Designs</h1>}
+          topic="Gestion des projets "
+          title={<h1>Elle implique la définition des objectifs du proje</h1>}
           subText={
             <h5>
-              We help clients to build great design to attract more customers
+            un processus méthodique visant à planifier, organiser,
+            exécuter et contrôler les activités nécessaires à la
+             réalisation d'un objectif spécifique dans un délai 
+             déterminé et avec des ressources limitées.
             </h5>
           }
         />
@@ -344,12 +347,14 @@ const Services = () => {
       </Content>
       <Content ref={addToRefs}>
         <TextBlock
-          topic="Develop"
-          title={<h1>We Develope high quality Web & App</h1>}
+          topic="Gestion des tableaux "
+          title={<h1> Nous offront une organisation visuelle des données</h1>}
           subText={
             <h5>
-              We build appropriate solution to develope your website & app with
-              best tools available
+             ce qui facilite la compréhension et l'analyse des informations
+             De plus, les tableaux offrent une flexibilité dans la manipulation 
+             des données, permettant aux utilisateurs de filtrer, trier
+             et regrouper les données selon leurs besoins spécifiques.
             </h5>
           }
         />
@@ -360,13 +365,15 @@ const Services = () => {
       </Content>
       <Content>
         <TextBlock
-          topic="Support"
-          title={<h1>We provide support for your digital presence</h1>}
+          topic="Gestione des employés"
+          title={<h1>assurant un suivi efficace des effectifs des performances individuelles,collectives</h1>}
           subText={
             <h5>
-              Once your system is online, we will stay on hand to help you use
-              it and provide technical support and maintenance <br /> your
-              business
+             consiste à superviser et coordonner les activités liées
+             aux ressources humaines au sein d'une organisation
+             Cela inclut le recrutement, la formation, l'évaluation 
+             des performances, la gestion du temps et des congés, 
+             ainsi que la résolution des conflits.
             </h5>
           }
         />

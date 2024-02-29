@@ -80,31 +80,34 @@ const Testimonials = () => {
 
   return (
     <Section>
-      <Title>Few good words about us!</Title>
+      <Title>Nous services </Title>
       <Carousal>
         <Slider {...settings}>
           <Card
-            text="CodeBucks has been essential part of our business. I would definetly
-        recommend CodeBucks. It has been amazing to have them."
-            name="Jenny (CodeCall)"
-            image="avatar-1"
+            text="Visualisez, organisez, réussissez : la gestion des tableaux, 
+            votre clé pour un travail efficace et structuré"
+            name="Gestion des tableau"
+           image="avatar-1"
           />
 
           <Card
-            text="CodeBucks has been essential part of our business. I would definetly recommend CodeBucks. It has been amazing to have them."
-            name="Jenny (CodeCall)"
-            image="avatar-2"
+            text="Libérez le potentiel de vos équipes : 
+            une gestion des employés innovante pour des résultats exceptionnels."
+            name="Gestion des employés"
+           image="avatar-2"
           />
 
           <Card
-            text="CodeBucks has been essential part of our business. I would definetly recommend CodeBucks. It has been amazing to have them."
-            name="Jenny (CodeCall)"
-            image="avatar-3"
+            text= "ransformez vos idées en succès :
+            une gestion de projet efficace pour des réalisations remarquables "
+            name="Gestion des projets "
+             image="avatar-3"
           />
 
           <Card
-            text="CodeBucks has been essential part of our business. I would definetly recommend CodeBucks. It has been amazing to have them."
-            name="Jenny (CodeCall)"
+            text="Un leadership stratégique : 
+            optimisez vos départements pour une performance d'exception"
+            name="Gestion des départements "
             image="avatar-4"
           />
         </Slider>

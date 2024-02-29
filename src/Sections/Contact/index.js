@@ -1,3 +1,4 @@
+import React from 'react';
 import Facebook from "../../assets/facebook-square-brands.svg";
 import LinkedId from "../../assets/linkedin-brands.svg";
 import Twitter from "../../assets/twitter-square-brands.svg";
@@ -10,7 +11,6 @@ const ContactSection = styled.section`
   background-color: #0a0b10;
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   align-items: center;
   justify-content: center;
 `;
@@ -29,7 +29,6 @@ const Title = styled.h1`
     left: 50%;
     bottom: 0;
     transform: translate(-50%, 0.5rem);
-    /* or 100px */
     border-bottom: 2px solid var(--pink);
   }
 `;
@@ -40,8 +39,7 @@ const Icons = styled.div`
   a {
     &:hover {
       img {
-        filter: invert(20%) sepia(100%) saturate(500%) hue-rotate(580deg)
-          brightness(100%) contrast(97%);
+        filter: invert(20%) sepia(100%) saturate(500%) hue-rotate(580deg) brightness(100%) contrast(97%);
       }
     }
     &:not(:last-child) {
@@ -54,123 +52,89 @@ const Icons = styled.div`
   }
 `;
 
-const Form = styled.form`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  input {
-    padding: 1rem calc(0.5rem + 1vw);
-    margin-bottom: 1rem;
-    background-color: var(--nav2);
-    border: none;
-    border-radius: 4px;
-    color: #eff7f8;
-    &:active,
-    &:focus {
-      border: none;
-      outline: none;
-      background-color: var(--nav);
-    }
-    &::placeholder {
-      color: #eff7f8;
-      opacity: 0.6;
-    }
-    &[name="name"] {
-      margin-right: 2rem;
-    }
-  }
-  textarea {
-    padding: 1rem calc(0.5rem + 1vw);
-    margin-bottom: 1rem;
-    background-color: var(--nav2);
-    border: none;
-    border-radius: 4px;
-    color: #eff7f8;
-    margin-bottom: 2rem;
-    &:focus,
-    &:active {
-      background-color: var(--nav);
-    }
-    &::placeholder {
-      color: #eff7f8;
-      opacity: 0.6;
-    }
-  }
-  button {
-    padding: 0.8rem 2rem;
-    background-color: var(--white);
-    border-radius: 20px;
-    font-size: 1.2rem;
-    color: #0a0b10;
-    cursor: pointer;
-    transition: transform 0.3s;
-    &:hover {
-      transform: scale(1.1);
-    }
-    &:active {
-      transform: scale(0.9);
-    }
-  }
+const MapSection = styled.div`
+  position: relative;
+  left: 450px;
+  top: -200px;
 `;
 
-const Row = styled.div`
-  @media only Screen and (max-width: 40em) {
-    display: flex;
-    flex-direction: column;
-    input {
-      &[name="name"] {
-        margin-right: 0;
-      }
-    }
-  }
+const TitleSection = styled.div`
+transform:translatex(-530px) translatey(-130px);
+color: #f5f4f4;
+  font-size:22px;
+  position:relative;
+  top:2px;
+  word-spacing:3.4px;
+  text-decoration:none;
 `;
+const ParagraphSection1 = styled.div`
+ 
+  left: -548px;
+  position:relative;
+  top:104px;
+  font-size: 15px;
+  color: #ffffff;
+
+ top:-91px;
+`;
+
+const ParagraphSection2 = styled.div`
+ 
+  left: -500px;
+  top:-60px;
+  color: #ffffff;
+  position:relative;
+ 
+`;
+
 const Contact = () => {
   return (
-    <ContactSection id="contact">
-      <Title>Get in touch</Title>
-      {/* <Text>Lorem ipsum dolor sit amet, consectetur adipisicing.</Text> */}
-      <Icons>
-        <a href="https://www.facebook.com/">
-          {" "}
-          <img src={Facebook} alt="Facebook" />
-        </a>
-        <a href="https://www.linkedin.com//">
-          <img src={LinkedId} alt="LinkedId" />
-        </a>
-        <a href="https://twitter.com/">
-          <img src={Twitter} alt="Twitter" />
-        </a>
-        <a href="https://www.instagram.com/">
-          <img src={Instagram} alt="Instagram" />
-        </a>
-      </Icons>
-      <Form>
-        <Row>
-          <input name="name" type="text" placeholder="your name" />
-          <input
-            name="email"
-            type="email"
-            placeholder="enter working email id"
-          />
-        </Row>
-        <textarea
-          name=""
-          id=""
-          cols="30"
-          rows="2"
-          placeholder="your message"
-        ></textarea>
-        <div style={{ margin: "0 auto" }}>
-          <button
-            onClick={(e) => {
-              e.preventDefault();
-            }}
-          >
-            Submit
-          </button>
-        </div>
-      </Form>
-    </ContactSection>
+    <>
+      <ContactSection id="contact">
+        <Title>Get in touch</Title>
+        <Icons>
+          <a href="https://www.facebook.com/">
+            <img src={Facebook} alt="Facebook" />
+          </a>
+          <a href="https://www.linkedin.com//">
+            <img src={LinkedId} alt="LinkedId" />
+          </a>
+          <a href="https://twitter.com/">
+            <img src={Twitter} alt="Twitter" />
+          </a>
+          <a href="https://www.instagram.com/">
+            <img src={Instagram} alt="Instagram" />
+          </a>
+        </Icons>
+        <TitleSection className="contact">
+          <h2>notre société </h2>
+          </TitleSection>
+          < ParagraphSection1>
+          <span className="primaryText"  >Call us : </span>
+          <span className="secondaryText">021 123 145 14</span>
+          </ParagraphSection1>
+          <ParagraphSection2>
+          <span className="primaryText"  >Send email to us :  </span>
+          <span className="secondaryText">socité@gmail.com</span>
+          </ParagraphSection2>
+          
+        <MapSection className="map-section">
+          <div className="gmap-frame">
+            <iframe
+              width="456"
+              height="333"
+              frameborder="0"
+              scrolling="no"
+              marginheight="0"
+              marginwidth="0"
+              src="https://maps.google.com/maps?width=520&amp;height=400&amp;hl=en&amp;q=%C2%B7%20Avenue%20du%20Commandant%20Bejaoui,%204000%20Sousse.+(yooreed)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+            >
+              <a href="https://www.gps.ie/">gps tracker sport</a>
+            </iframe>
+          </div>
+        </MapSection>
+      </ContactSection>
+    </>
   );
 };
 
