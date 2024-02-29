@@ -1,3 +1,4 @@
+//commit samar
 //This is home page, It will contains all the sections require in this page.
 
 //Import all the require sections here
