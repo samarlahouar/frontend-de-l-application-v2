@@ -6,11 +6,12 @@ import logo from "../../assets/logo.svg";
 
 const Headers = styled.header`
   display: flex;
+  height:85px;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 5rem;
-  background-color:#232384;/* Nouvelle couleur */
-  color: var(--white);
+  background-color:#799aa23d ;/* Nouvelle couleur */
+  color: var(--black); /*couleur de nom logo*/
   position: relative;
   z-index: 500;
   @media only Screen and (max-width: 64em) {
@@ -39,13 +40,14 @@ const Nav = styled.nav`
   align-items: center;
   justify-content: space-between;
   transition: all 0.3s;
+  
   @media only Screen and (max-width: 48em) {
     display: none;
   }
   a {
     font-weight: 600;
     line-height: 1.5;
-    color: var(--white);
+    color: var(--black);
     &::after {
       content: "";
       display: block;
@@ -65,7 +67,7 @@ const Button = styled.button`
   background-color: var(--purple);
   padding: 0.5rem 1rem;
   border-radius: 20px;
-  color: var(--white);
+  color: var(--black);
   font-weight: 600;
   cursor: pointer;
   transition: all 0.2s;
@@ -100,7 +102,7 @@ const HamburgerBtn = styled.button`
   &::before,
   &::after {
     content: "";
-    background-color: var(--white);
+    background-color: var(--black);
     width: 2rem;
     height: 2px;
     display: inline-block;
@@ -149,6 +151,7 @@ const MobileMenu = styled.nav`
     cursor: pointer;
   }
 `;
+
 
 const Header = () => {
   const [click, setClick] = useState(false);
@@ -229,19 +232,19 @@ const Header = () => {
         <h3>Gestion Des Matériaux</h3>
       </Logo>
       <Nav>
-        <a href="#home" onClick={(e) => scrollUp("home", e)}>
+        <a className="home" href="#home" onClick={(e) => scrollUp("home", e)}>
           accuile
         </a>
-        <a href="#about" onClick={(e) => scrollUp("about", e)}>
+        <a  className="about" href="#about" onClick={(e) => scrollUp("about", e)}>
           à propos
         </a>
-        <a href="#services" onClick={(e) => scrollUp("services", e)}>
+        <a className="services"  href="#services" onClick={(e) => scrollUp("services", e)}>
           Services
         </a>
-        <a href="#contact" onClick={(e) => handleClick("contact", e)}>
+        <a className="contact" href="#contact" onClick={(e) => handleClick("contact", e)}>
           contact
         </a>
-        <a href="#sign in " onClick={(e) => handleClick("sign in ", e)}>
+        <a className="se connecter " href="#se connecter " onClick={(e) => handleClick("se connecter  ", e)}>
           <Button>se connecter</Button>
         </a>
       </Nav>
@@ -249,20 +252,20 @@ const Header = () => {
         <span></span>
       </HamburgerBtn>
       <MobileMenu clicked={+click}>
-        <a href="#home" onClick={(e) => handleClick("home", e)}>
+        <a className="home" href="#home" onClick={(e) => handleClick("home", e)}>
           Home
         </a>
-        <a href="#about" onClick={(e) => handleClick("about", e)}>
+        <a  className="about" href="#about" onClick={(e) => handleClick("about", e)}>
           About Us
         </a>
-        <a href="#services" onClick={(e) => handleClick("services", e)}>
+        <a className="services" href="#services" onClick={(e) => handleClick("services", e)}>
           Services
         </a>
-        <a href="#contact" onClick={(e) => handleClick("contact", e)}>
+        <a  className="contact" href="#contact" onClick={(e) => handleClick("contact", e)}>
           contact
         </a>
-        <a href="#sign in " onClick={(e) => handleClick("sign in ", e)}>
-          <Button>sign in</Button>
+        <a className="se connecter " href="#se connecter " onClick={(e) => handleClick("se connecter  ", e)}>
+          <Button>se connecter</Button>
         </a>
       </MobileMenu>
     </Headers>
