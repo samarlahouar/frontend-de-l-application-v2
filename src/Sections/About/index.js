@@ -4,6 +4,7 @@ import rocket from "../../assets/rocket image.png";
 import human from "../../assets/human.svg";
 import hand from "../../assets/hand.svg";
 
+
 const move = keyframes`
 0% { transform: translateY(-5px)         }
     50% { transform: translateY(10px) translateX(10px)        }
@@ -53,14 +54,21 @@ const Main = styled.div`
 const Title = styled.h1`
   font-size: 2rem;
   display: inline-block;
+  margin-left : 525px;
+
+  margin-right : 12px;
+ 
+  margin-top : -64px;
 `;
 
 const CurvedLine = styled.div`
   width: 7rem;
   height: 2rem;
+  margin-left : 540px;
   border: solid 5px var(--purple);
   border-color: var(--purple) transparent transparent transparent;
   border-radius: 150%/60px 70px 0 0;
+
 `;
 
 const Content = styled.div`
@@ -98,6 +106,7 @@ const Human = styled.div`
 const Text = styled.h4`
   font-size: calc(0.5rem + 1vw);
   line-height: 1.5;
+  margin-top : -117px;
   color: var(--nav2);
 `;
 const Circle = styled.span`
@@ -134,9 +143,7 @@ const About = () => {
             <img src={rocket} alt="" width="400" height="400" />
           </Rocket>
           <AboutText>
-            <Human>
-              <img src={human} alt="" width="400" height="400" />
-            </Human>
+          
 
             <Text>
                Notre application de gestion des matériaux offre une approche
@@ -146,11 +153,7 @@ const About = () => {
                processus, favorisant ainsi une utilisation plus efficace des
                ressources et une croissance organisationnelle accrue.
             </Text>
-            <div>
-              <Circle style={{ backgroundColor: "var(--purple)" }} />
-              <Circle style={{ backgroundColor: "var(--pink)" }} />
-              <Circle style={{ backgroundColor: "var(--black)" }} />
-            </div>
+          
           </AboutText>
         </Content>
       </Main>

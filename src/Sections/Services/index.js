@@ -1,11 +1,10 @@
 import gsap from "gsap";
 import { useEffect, useRef } from "react";
 import styled from "styled-components";
+import './index.css';
 
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Tube from "../../assets/3dtube.png";
-import Cone from "../../assets/3dtriangle.png";
-import Capsule from "../../assets/3dcapsule.png";
+
 
 import TextBlock from "../../components/TextBlock";
 import SvgBlock from "../../components/SvgBlock";
@@ -44,9 +43,10 @@ const Background = styled.div`
 const Title = styled.h1`
   color: var(--white);
   display: inline-block;
+  
   font-size: 2rem;
   /* margin-top: 4rem; */
-  margin-top: 1rem;
+  margin-top: 2rem;
   position: relative;
   &::before {
     content: "";
@@ -57,15 +57,17 @@ const Title = styled.h1`
     bottom: 0;
     transform: translate(-50%, 0.5rem);
     /* or 100px */
-    border-bottom: 2px solid var(--pink);
+    border-bottom: 2px solid ;
+ 
   }
 `;
 
 const Line = styled.span`
   border-left: 4px solid var(--background);
   height: 15rem;
-  margin-top: 2rem;
+  margin-top: 10rem;
   border-radius: 20px 20px 0 0;
+ 
 `;
 
 const Triangle = styled.span`
@@ -97,21 +99,6 @@ const Content = styled.div`
     &:last-child {
       margin-bottom: 1rem;
     }
-  }
-`;
-
-const OBJ = styled.div`
-  position: absolute;
-  top: 80%;
-  right: 35%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 20vw;
-  /* z-index: 1; */
-
-  @media only Screen and (max-width: 48em) {
-    opacity: 0.5;
   }
 `;
 
@@ -340,9 +327,7 @@ const Services = () => {
             </h5>
           }
         />
-        <OBJ>
-          <img src={Tube} alt="Tube Object" width="400" height="400" />
-        </OBJ>
+      
         <SvgBlock svg="Design.svg" />
       </Content>
       <Content ref={addToRefs}>
@@ -358,14 +343,12 @@ const Services = () => {
             </h5>
           }
         />
-        <OBJ>
-          <img src={Cone} alt="Cone Object" width="400" height="400" />
-        </OBJ>
+       
         <SvgBlock svg="Develope.svg" />
       </Content>
       <Content>
         <TextBlock
-          topic="Gestione des employés"
+          topic="Gestione des employées"
           title={<h1>assurant un suivi efficace des effectifs des performances individuelles,collectives</h1>}
           subText={
             <h5>
@@ -377,9 +360,7 @@ const Services = () => {
             </h5>
           }
         />
-        <OBJ>
-          <img src={Capsule} alt="Capsule Object" width="400" height="400" />
-        </OBJ>
+       
         <SvgBlock svg="Support.svg" />
       </Content>
     </ServiceSection>

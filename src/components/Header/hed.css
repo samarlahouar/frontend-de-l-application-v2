@@ -1,0 +1,91 @@
+#root>header:nth-child(2)>nav:nth-child(2)>div:nth-child(1) {
+    margin-left : -308px;
+    }
+    #root > header:nth-child(2) > nav:nth-child(2) > a:nth-child(2) {
+        color : #2b1f84;
+        font-size : 18px;
+        }
+        #root > header:nth-child(2) > nav:nth-child(2) > a:nth-child(3) {
+            color : #2b1f84;
+            font-size : 18px;
+        }
+        #root > header:nth-child(2) > nav:nth-child(2) > a:nth-child(4) {
+        color : #2b1f84;
+        font-size : 18px;
+        }
+        #root > header:nth-child(2) > nav:nth-child(2) > div:nth-child(1) > a:nth-child(1) {
+        color : #2b1f84;
+        font-size : 18px;
+        }
+        #root > header:nth-child(2) > nav:nth-child(2) > a:nth-child(5) > button:nth-child(1) {
+        color : rgb(255, 255, 255);
+        font-size : 16px;
+        background-color : rgb(43, 31, 132);
+
+        }
+        #root > header:nth-child(2) > nav:nth-child(2) > a:nth-child(6) > button:nth-child(1) {
+        color : rgb(255, 255, 255);
+        font-size : 15px;
+        }
+        #root > header:nth-child(2) > a:nth-child(1) > h3:nth-child(2) {
+        color : rgb(255, 255, 255);
+        }
+        #root > header:nth-child(2) > nav:nth-child(2) > a:nth-child(5) {
+        font-size : 18px;
+        }
+
+        .text-container {
+            white-space: nowrap;
+            color : rgb(255, 255, 255);
+font-weight : 800;
+font-size : 23px;
+}
+          
+          
+          .text-item {
+            margin-right: 10px; /* adjust this value to increase/decrease the space between the words */
+            color : rgb(255, 255, 255);
+font-weight : 800;
+font-size : 23px;
+}
+
+
+#root > header:nth-child(2) > a:nth-child(1) > img:nth-child(1) {
+    width : 63px;
+    max-width : 63px;
+    }
+          
+
+    #root > header:nth-child(2) > nav:nth-child(2) > a:nth-child(6) > button:nth-child(1) {
+        margin-right : -36px;
+        background-color : rgb(43, 31, 132) !important;
+
+        font-size : 14px;
+        padding-top : 7px;
+        padding-left : 10px;
+        padding-right : 10px;
+        padding-bottom : 7px;
+        }
+        #root > header:nth-child(2) > nav:nth-child(2) > a:nth-child(5) > button:nth-child(1) {
+        background-color : rgb(43, 31, 132) !important;
+        font-size : 14px;
+        border-top-left-radius : 18px;
+        border-top-right-radius : 18px;
+        border-bottom-right-radius : 18px;
+        border-bottom-left-radius : 18px;
+        padding-left : 10px;
+        padding-right : 10px;
+        padding-bottom : 7px;
+        padding-top : 7px;
+        margin-right : 8px;
+        }        
+        #root > header:nth-child(2) {
+        background-color : rgba(121, 154, 162, 0);
+        }
+
+
+        #root > header:nth-child(2) > nav:nth-child(2) > a:nth-child(6) > button:nth-child(1) {
+            margin-right : 2px;
+            background-color : rgb(43, 31, 132) !important;
+            }
+        

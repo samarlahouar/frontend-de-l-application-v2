@@ -1,0 +1,79 @@
+.login-popup {
+    position: fixed;
+    top: 50%; /* Déplacer le popup à 50% de la hauteur de la fenêtre */
+    left: 0;
+    width: 100%;
+    transform: translateY(60%); /* Centrer verticalement le popup */
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.login-popup-inner {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 20px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.login-btn,
+.cancel-btn { /* Ajout de la classe cancel-btn */
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-btn:hover,
+.cancel-btn:hover { /* Ajout de la classe cancel-btn */
+    background-color: #0056b3;
+}
+
+.cancel-btn { /* Ajout de la classe cancel-btn */
+    background-color: #dc3545; /* Couleur rouge */
+}
+
+.cancel-btn:hover { /* Ajout de la classe cancel-btn */
+    background-color: #c82333; /* Couleur rouge au survol */
+}
+
+#root>header:nth-child(2)>nav:nth-child(4)>button:nth-child(5) {
+    border-top-left-radius : 20px;
+    border-top-right-radius : 20px;
+    border-bottom-right-radius : 20px;
+    border-bottom-left-radius : 20px;
+    }

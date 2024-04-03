@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Facebook from "../../assets/facebook-square-brands.svg";
 import LinkedId from "../../assets/linkedin-brands.svg";
 import Twitter from "../../assets/twitter-square-brands.svg";
@@ -29,7 +29,7 @@ const Title = styled.h1`
     left: 50%;
     bottom: 0;
     transform: translate(-50%, 0.5rem);
-    border-bottom: 2px solid var(--pink);
+    border-bottom: 2px solid var(--white);
   }
 `;
 
@@ -53,39 +53,116 @@ const Icons = styled.div`
 `;
 
 const MapSection = styled.div`
-  position: relative;
-  left: 450px;
-  top: -200px;
+  margin-bottom: 30px;
+  margin-top: 50px;
+  color: #ffffff;
 `;
 
 const TitleSection = styled.div`
-transform:translatex(-530px) translatey(-130px);
-color: #f5f4f4;
-  font-size:22px;
-  position:relative;
-  top:2px;
-  word-spacing:3.4px;
-  text-decoration:none;
-`;
-const ParagraphSection1 = styled.div`
- 
-  left: -548px;
-  position:relative;
-  top:104px;
-  font-size: 15px;
+  font-size: 25px;
+  margin-bottom: 15px;
   color: #ffffff;
-
- top:-91px;
 `;
 
-const ParagraphSection2 = styled.div`
- 
-  left: -500px;
-  top:-60px;
-  color: #ffffff;
-  position:relative;
- 
+const Paragraph = styled.p`
+  color: white;
 `;
+
+const Form = styled.form`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+const Label = styled.label`
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: #ffffff;
+`;
+
+const Input = styled.input`
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  width: 100%;
+`;
+
+const Button = styled.button`
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100%;
+  &:hover {
+    background-color: #0056b3;
+  }
+`;
+
+const EmailForm = () => {
+  const [formData, setFormData] = useState({
+    email: '',
+    message: '',
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Envoyer l'e-mail avec les données du formulaire
+    console.log(formData);
+    // Réinitialiser le formulaire après l'envoi si nécessaire
+    setFormData({
+      email: '',
+      message: '',
+    });
+  };
+
+  return (
+    <Form onSubmit={handleSubmit}>
+      <div className="contact-info">
+        <Paragraph>Feel free to reach out to us. You can call us at <strong>565686985</strong> <br></br>
+         or<br></br>
+         send us an email.</Paragraph><br></br>
+      </div>
+      <div className="form-group">
+        <Label htmlFor="email">Your Email</Label>
+        <Input
+          type="email"
+          id="email"
+          name="email"
+          value={formData.email}
+          onChange={handleChange}
+          required
+          placeholder="Your email address"
+        />
+      </div>
+      <div className="form-group">
+        <Label htmlFor="message">Your Message</Label>
+        <Input
+          as="textarea"
+          rows="4"
+          id="message"
+          name="message"
+          value={formData.message}
+          onChange={handleChange}
+          required
+          placeholder="Write your message here..."
+        />
+      </div>
+      <Button type="submit">Send Email</Button>
+    </Form>
+  );
+};
 
 const Contact = () => {
   return (
@@ -107,17 +184,9 @@ const Contact = () => {
           </a>
         </Icons>
         <TitleSection className="contact">
-          <h2>notre société </h2>
-          </TitleSection>
-          < ParagraphSection1>
-          <span className="primaryText"  >Call us : </span>
-          <span className="secondaryText">021 123 145 14</span>
-          </ParagraphSection1>
-          <ParagraphSection2>
-          <span className="primaryText"  >Send email to us :  </span>
-          <span className="secondaryText">socité@gmail.com</span>
-          </ParagraphSection2>
-          
+          <h2>Notre société</h2>
+        </TitleSection>
+        <EmailForm />
         <MapSection className="map-section">
           <div className="gmap-frame">
             <iframe

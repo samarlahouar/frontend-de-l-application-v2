@@ -32,7 +32,6 @@ const Image = styled.div`
 const TEXT = styled.h4`
   color: var(--white);
   padding: 0 calc(1rem + 1vw);
-
   text-align: center;
   font-size: calc(0.6rem + 0.5vw);
 `;
@@ -43,14 +42,15 @@ const NAME = styled.h3`
   font-size: calc(0.5rem + 1vw);
 `;
 
-const Card = ({ name, text, image }) => {
-  const Avatar = require(`../../assets/${image}.jpg`);
 
+const Card = ({ name, text, image, }) => {
+  const Avatar = require(`../../assets/${image}.jpg`);
   return (
     <CARD>
       <Image img={Avatar} width="400" height="400" />
       <TEXT>{text}</TEXT>
       <NAME>{name}</NAME>
+     
     </CARD>
   );
 };
